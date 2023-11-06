@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="in">
+    <meta charset="UTF-8">
+    <title>Portofolio Deti </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cc45e05682.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo"><span>Deti julianti</a>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Deti</span><br>From Indonesia</h1> 
+                <p>Jangan berharap sesuatu yang luar biasa jika hanya melakukan sesuatu yang biasa saja</p>            
+            </div>
+        </div> 
+    </div>
+    
+  <!-- ----------about---------- -->
+    <div class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="yyy.jpg.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About <span>Me</span></h1>
+                    <p>Nama saya adalah "Deti julianti",
+                    Saya adalah seorang pelajar di SMK Al Ghifari kelas XII jurusan RPL (Rekayasa Perangkat Lunak),Ini adalah tugas saya membuat portofolio berbasis website </p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>      
+                    </div> 
+                    </div>  
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2012-2018</span><br>SDN 1 SUKARATU</li>
+                            <li><span>2018-2021</span><br>SMP AL-GHIFARI</li>
+                            <li><span>2021-2024</span><br>SMK Al-Ghifari</li>
+
+                        </ul>
+                    </div>  
+                </div>                 
+            </div>
+        </div>
+    </div>  
+<!-- -----------skill---------- -->
+    <div class="skill" id="skill">
+        <div class="container">
+            <div class="row">
+                <div class="skill-col-1">
+                     <h1 class="sub-title" >My <span>Skills</span></h1>
+                     <div class="skill-box">
+                          <div class="skill-content">
+                              <div class="progress">
+                              <h3>Programming <span>30%</span></h3>
+                              <div class="bar"><span></span></div>     
+                              </div>
+                              
+                              <div class="progress">
+                              <h3>HTML<span>80%</span></h3>
+                              <div class="bar"><span></span></div>     
+                              </div>
+                              
+                              <div class="progress">
+                              <h3>Netbeans <span>90%</span></h3>
+                              <div class="bar"><span></span></div>     
+                              </div>
+
+                              <div class="progress">
+                              <h3>Css<span>50%</span></h3>
+                              <div class="bar"><span></span></div>
+                          </div>
+                        </div>
+                     </div>
+                <div class="skill-col-2">
+                    <img src="done.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- --------contact--------- -->
+
+      <div id="contact">
+         <div class="container">
+            <div class="row">
+                <div class="contact-left">    
+                   <h1 class="sub-title">Contact <span>Me</span></h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>juliadeti@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>+6283840993758</p>
+                    <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://sayyidzf22.blogspot.com/2023/01/microbloging.html"><i class="fa-brands fa-blogger"></i></a>
+                    <a href="https://youtube.com/@sayyidzf2928?si=LMU3fBy2nCtmurct"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                 </div>
+              
+              <div class="contact-right">
+                  <form>
+                      <input type="text" name="name"placeholder="Your Name" required>
+                      <input type="email" name="email"placeholder="Your Email" required>
+                      <textarea name="massage" rows="6" placeholder="Your Massage"></textarea>
+                      <button type="submit" class="btn btn2">Submit</button>
+                  </form>
+              </div>    
+             </div>
+          </div>
+      </div>
+    
+      
+      <div class="copyright">
+        Copyright © 2023 Deti julianti. All Rights Reserved.
+    </div>
+    
+    <script>
+        
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+    </script>
+    
+    <script>
+        
+        var sidemenu = document.getElementById("sidemenu");
+        
+         function openmenu(){
+             sidemenu.style.right = "0";
+         }
+         
+         function closemenu(){
+             sidemenu.style.right = "-200px";
+         }
+         
+    </script>
+    
+</body>
+</html>
